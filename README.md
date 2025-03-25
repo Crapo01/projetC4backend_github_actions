@@ -1,12 +1,59 @@
-# React + Vite
+# GIT ACTIONS LESSON
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## SETUP
 
-## Expanding the ESLint configuration
+VITE: 
+https://vite.dev/guide/
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+    npm create vite@latest  
+    cd my-project
+    npm install
+    npm run dev
+
+VITEST:
+https://vitest.dev/guide/
+
+    npm install -D vitest
+
+in package.json:
+
+    {
+    "name": "my-app",
+    "private": true,
+    "version": "0.0.0",
+    "homepage": "./",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "lint": "eslint .",
+        "preview": "vite preview",
+        "test": "vitest"
+    },
+    "dependencies": {
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.21.0",
+        "@types/react": "^19.0.10",
+        "@types/react-dom": "^19.0.4",
+        "@vitejs/plugin-react": "^4.3.4",
+        "eslint": "^9.21.0",
+        "eslint-plugin-react-hooks": "^5.1.0",
+        "eslint-plugin-react-refresh": "^0.4.19",
+        "globals": "^15.15.0",
+        "vite": "^6.2.0",
+        "vitest": "^3.0.9"
+    }
+    }
+
+to use react with githubpages: "homepage": "./" 
+
+## DEPLOY TO GITHUB PAGES
+
+https://github.com/marketplace/actions/deploy-to-github-pages
+
