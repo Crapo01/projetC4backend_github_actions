@@ -1,0 +1,23 @@
+name: Variables
+on:
+  workflow_dispatch:
+env:
+  TOP_VAR: top_var
+jobs:
+  variables:
+    name: echo vars
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print result
+        env:
+          MY_VAR: my var
+          REPO: ${{ github.repository}}
+          DB_PASSWORD: 123
+          DB_PASS_SECRET: ${{secrets.DB_PASSWORD}}
+        shell: bash
+        run: |
+          echo $TOP_VAR
+          echo $MY_VAR
+          echo $REPO
+          echo $DB_PASSWORD
+          echo $DB_PASS_SECRET

@@ -38,6 +38,5 @@ jobs:
         with:
           folder: dist
           branch: gh-pages
-        env:
-                ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        
 
