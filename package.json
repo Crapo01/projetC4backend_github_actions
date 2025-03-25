@@ -2,7 +2,7 @@
   "name": "my-app",
   "private": true,
   "version": "0.0.0",
-  
+  "homepage": "https://crapo01.github.io/projetC4backend_github_actions/ ",
   "type": "module",
   "scripts": {
     "dev": "vite",
