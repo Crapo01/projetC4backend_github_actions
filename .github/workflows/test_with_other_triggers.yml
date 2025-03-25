@@ -1,0 +1,18 @@
+name: test with other triggers
+on:
+    pull_request:
+          types:
+                - opened
+    workflow_dispatch:
+    push:
+        branches:
+            - main
+            - 'hotfix-*'
+            - 'feature/**'
+        paths-ignore:
+            - '.github/workflows/*'
+# ex: hotfix-fix-wording
+# ex: feature/user/update
+jobs:
+    test2 :
+        runs-on: ubuntu-latest
