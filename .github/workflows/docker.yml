@@ -1,4 +1,4 @@
-name: test with other triggers
+name: docker containres
 on:
   workflow_dispatch:
 jobs:
