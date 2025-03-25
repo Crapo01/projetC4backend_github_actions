@@ -1,18 +1,30 @@
 name: test with other triggers
 on:
-    pull_request:
-          types:
-                - opened
-    workflow_dispatch:
-    push:
-        branches:
-            - main
-            - 'hotfix-*'
-            - 'feature/**'
-        paths-ignore:
-            - '.github/workflows/*'
+  pull_request:
+    types:
+      - opened
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - 'hotfix-*'
+      - 'feature/**'
+    paths-ignore:
+      - '.github/workflows/*'
 # ex: hotfix-fix-wording
 # ex: feature/user/update
+
 jobs:
-    test2 :
-        runs-on: ubuntu-latest
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code
+        uses: actions/checkout@v3
+      - name: Install Node
+        uses: actions/setup-node@v3
+        with:
+            node-version: 20
+      - name: Install
+        run: npm install
+      - name: Test
+        run: npm run test
